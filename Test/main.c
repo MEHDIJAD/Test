@@ -4,8 +4,8 @@
 
 void test_cases() 
 {
-    ft_printf("[%4.4d]\n", 42);
-    printf("[%8.3d]\n", 42);
+    ft_printf("[%02.2d]\n", 42);
+    printf("[%02.2d]\n", 42);
 
 }
 
