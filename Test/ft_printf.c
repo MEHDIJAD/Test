@@ -46,16 +46,16 @@ int ft_print_format(char format_specifier, va_list ap, t_list options)
 		count += ft_printaddress(ptr, options);
 	}
     else if (format_specifier == 'u')
-		count += ft_printunsigned(va_arg(ap, unsigned int), options);
+		{count += ft_printunsigned(va_arg(ap, unsigned int), options);}
     else if (format_specifier == '%')
-        count += ft_putchar('%');
+        {count += ft_putchar('%');}
 	return (count);
 }
 
 int ft_skip(const char *format, int *i)
 {
     if (format[*i] == '%')
-        return (*i);
+        {return (*i);}
 	while (format[*i] == '%' || format[*i] == '-' || format[*i] == '+'
 		|| format[*i] == ' ' || format[*i] == '0'|| format[*i] == '#')
 	{
